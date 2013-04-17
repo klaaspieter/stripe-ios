@@ -88,4 +88,31 @@
 
 }
 
+#pragma mark -
+#pragma mark UIResponder
+- (BOOL)isFirstResponder;
+{
+    return self.paymentView.isFirstResponder;
+}
+
+- (BOOL)canBecomeFirstResponder;
+{
+    return self.paymentView.canBecomeFirstResponder;
+}
+
+- (BOOL)becomeFirstResponder;
+{
+    return [self.paymentView becomeFirstResponder];
+}
+
+- (BOOL)canResignFirstResponder;
+{
+    return self.paymentView.canResignFirstResponder;
+}
+
+- (BOOL)resignFirstResponder;
+{
+    return [[self paymentView] resignFirstResponder];
+}
+
 @end
